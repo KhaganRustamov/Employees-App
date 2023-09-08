@@ -9,9 +9,7 @@ import EmployeesAddForm from "../employees-add-form/employees-add-form";
 import "./app.css";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+state = {
       data: [
         { name: "John C.", salary: 800, increase: false, rise: false, id: 1 },
         { name: "Alex M.", salary: 3000, increase: false, rise: false, id: 2 },
@@ -21,7 +19,6 @@ class App extends Component {
       filter: "",
     };
     this.id = 4;
-  }
 
   deleteItem = (id) => {
     this.setState(({ data }) => {
